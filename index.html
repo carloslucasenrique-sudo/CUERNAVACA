@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuernavaca, Morelos - La Ciudad de la Eterna Primavera</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Cuernavaca_Centro.jpg') no-repeat center/cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        nav {
+            background: #2c3e50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f1c40f;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        .lugares {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 calc(33% - 20px);
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cuernavaca, Morelos</h1>
+    <p>La Ciudad de la Eterna Primavera</p>
+</header>
+
+<nav>
+    <a href="#historia">Historia</a>
+    <a href="#lugares">Lugares</a>
+    <a href="#gastronomia">Gastronomía</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="container">
+
+    <section id="historia">
+        <h2>Historia</h2>
+        <p>
+            Cuernavaca es una de las ciudades más antiguas de México, conocida por su clima cálido y su rica historia.
+            Fue habitada por los tlahuicas y posteriormente conquistada por los mexicas. Durante la colonia,
+            Hernán Cortés estableció aquí una de sus residencias.
+        </p>
+    </section>
+
+    <section id="lugares">
+        <h2>Lugares turísticos</h2>
+        <div class="lugares">
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Palacio_de_Cort%C3%A9s.jpg" alt="Palacio de Cortés">
+                <h3>Palacio de Cortés</h3>
+                <p>Uno de los edificios coloniales más antiguos de América, actualmente museo.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Jardin_Borda.jpg" alt="Jardín Borda">
+                <h3>Jardín Borda</h3>
+                <p>Hermoso jardín histórico con fuentes, lago y vegetación exuberante.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Catedral_de_Cuernavaca.jpg" alt="Catedral de Cuernavaca">
+                <h3>Catedral de Cuernavaca</h3>
+                <p>Parte del conjunto de monasterios del siglo XVI declarados Patrimonio de la Humanidad.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gastronomia">
+        <h2>Gastronomía</h2>
+        <p>
+            La gastronomía de Cuernavaca incluye platillos típicos como los tacos acorazados, cecina,
+            pozole y una gran variedad de antojitos mexicanos tradicionales.
+        </p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Quieres saber más? Escríbenos:</p>
+        <form>
+            <label>Nombre:</label><br>
+            <input type="text" name="nombre"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email"><br><br>
+
+            <label>Mensaje:</label><br>
+            <textarea name="mensaje"></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Turismo Cuernavaca | Página educativa</p>
+</footer>
+
+</body>
+</html>
