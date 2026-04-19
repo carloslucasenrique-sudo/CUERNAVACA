@@ -5,175 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuernavaca - Turismo</title>
 
+    <!-- Vinculación CSS -->
+    <link rel="stylesheet" href="styles.css">
+
     <!-- Fuente -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --verde: #2ecc71;
-            --verde-oscuro: #27ae60;
-            --azul: #2c3e50;
-            --fondo: #f4f6f7;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--fondo);
-            color: #333;
-        }
-
-        header {
-            height: 90vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                        url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Cuernavaca_Centro.jpg') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        header h1 {
-            font-size: 3.5em;
-        }
-
-        nav {
-            background: var(--azul);
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-            position: sticky;
-            top: 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            color: var(--verde);
-        }
-
-        section {
-            padding: 60px 10%;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--azul);
-        }
-
-        .contenido {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
-
-        /* TARJETAS */
-        .lugares {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .card h3 {
-            padding: 10px;
-            color: var(--verde-oscuro);
-        }
-
-        .card p {
-            padding: 0 10px 15px;
-        }
-
-        /* GALERÍA */
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .galeria img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s, filter 0.3s;
-            cursor: pointer;
-        }
-
-        .galeria img:hover {
-            transform: scale(1.1);
-            filter: brightness(1.2);
-        }
-
-        /* FORMULARIO */
-        form {
-            max-width: 500px;
-            margin: auto;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            background: var(--verde);
-            color: white;
-            border: none;
-            padding: 12px;
-            width: 100%;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: var(--verde-oscuro);
-        }
-
-        footer {
-            background: var(--azul);
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
 </head>
 <body>
 
 <header>
-    <div>
+    <div class="hero">
         <h1>Cuernavaca</h1>
         <p>La Ciudad de la Eterna Primavera</p>
     </div>
@@ -186,64 +27,69 @@
     <a href="#contacto">Contacto</a>
 </nav>
 
+<main>
+
 <section id="historia">
     <h2>Historia</h2>
-    <div class="contenido">
-        <p>
-            Cuernavaca es una ciudad histórica con raíces prehispánicas y gran importancia durante la época colonial.
-            Su clima agradable la convierte en uno de los destinos turísticos favoritos en México.
-        </p>
-    </div>
+    <p>
+        Cuernavaca es una ciudad con gran riqueza histórica, desde las culturas prehispánicas
+        hasta la época colonial. Su clima cálido la convierte en un destino turístico ideal.
+    </p>
 </section>
 
 <section id="lugares">
     <h2>Lugares turísticos</h2>
-    <div class="lugares">
 
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Palacio_de_Cort%C3%A9s.jpg">
+    <div class="cards">
+
+        <article class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Palacio_de_Cort%C3%A9s.jpg" alt="">
             <h3>Palacio de Cortés</h3>
-            <p>Uno de los edificios coloniales más importantes de América.</p>
-        </div>
+            <p>Edificio histórico convertido en museo.</p>
+        </article>
 
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Jardin_Borda.jpg">
+        <article class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Jardin_Borda.jpg" alt="">
             <h3>Jardín Borda</h3>
-            <p>Hermoso jardín histórico lleno de naturaleza.</p>
-        </div>
+            <p>Hermoso jardín lleno de historia y naturaleza.</p>
+        </article>
 
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Catedral_de_Cuernavaca.jpg">
+        <article class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Catedral_de_Cuernavaca.jpg" alt="">
             <h3>Catedral</h3>
             <p>Monumento histórico del siglo XVI.</p>
-        </div>
+        </article>
 
     </div>
 </section>
 
 <section id="galeria">
-    <h2>Galería de imágenes</h2>
+    <h2>Galería</h2>
+
     <div class="galeria">
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Cuernavaca_Centro.jpg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Palacio_de_Cort%C3%A9s.jpg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Jardin_Borda.jpg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Catedral_de_Cuernavaca.jpg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Teopanzolco.jpg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Cuernavaca_Panoramica.jpg">
-
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Cuernavaca_Centro.jpg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Palacio_de_Cort%C3%A9s.jpg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Jardin_Borda.jpg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Catedral_de_Cuernavaca.jpg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Teopanzolco.jpg" alt="">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Cuernavaca_Panoramica.jpg" alt="">
     </div>
+
 </section>
 
 <section id="contacto">
     <h2>Contacto</h2>
+
     <form>
         <input type="text" placeholder="Nombre">
         <input type="email" placeholder="Correo">
         <textarea placeholder="Mensaje"></textarea>
-        <button>Enviar</button>
+        <button type="submit">Enviar</button>
     </form>
+
 </section>
+
+</main>
 
 <footer>
     <p>© 2026 Turismo Cuernavaca</p>
